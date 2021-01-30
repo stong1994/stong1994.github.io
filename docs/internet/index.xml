@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cristo</title>
-    <link>https://stong1994.github.io/</link>
+    <link>https://stong1994.github.io/internet/</link>
     <description>Recent content on cristo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 29 Jan 2021 23:31:51 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jan 2021 23:31:51 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/internet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDD实战</title>
       <link>https://stong1994.github.io/internet/ddd/practise/</link>
@@ -54,15 +54,6 @@
     </item>
     
     <item>
-      <title>卓有成效的管理者</title>
-      <link>https://stong1994.github.io/book/improve/the_effective_executive/</link>
-      <pubDate>Fri, 29 Jan 2021 23:31:51 +0800</pubDate>
-      
-      <guid>https://stong1994.github.io/book/improve/the_effective_executive/</guid>
-      <description>作者：彼得·德鲁克 豆瓣评分：8.7 微信评分：8.9 出版年: 2005-6 提纲 1. 谁是管理者 如果一个工作者能够凭借其职位和知识，对其组织负有贡献的责任并能够</description>
-    </item>
-    
-    <item>
       <title>DDD基础</title>
       <link>https://stong1994.github.io/internet/ddd/base/</link>
       <pubDate>Fri, 29 Jan 2021 23:07:51 +0800</pubDate>
@@ -90,15 +81,6 @@ DDD 强调领域模型和微服务设计的一体性，先有领域模型然后�
   聚合：聚合就是由业务和逻辑紧密关联的实体和值对象组合而成的，聚合是数据修改和持久化的基本单元，每一个聚合对应一个仓储，实现数据的持久化。
   聚合根：聚合根的主要目的是为了避免由于复杂数据模型缺少统一的业务规则控制，而导致聚合、实体之间数据不一致性的问题。
  如果把聚合比作组织，那聚合根就是这个组织的负责人。聚合根也称为根实体，它不仅是实体，还是聚合的管理者。</description>
-    </item>
-    
-    <item>
-      <title>长路漫漫-记一次夜跑</title>
-      <link>https://stong1994.github.io/life/long_alive_record_with_night_run/</link>
-      <pubDate>Fri, 04 Dec 2020 23:31:51 +0800</pubDate>
-      
-      <guid>https://stong1994.github.io/life/long_alive_record_with_night_run/</guid>
-      <description>到公园去跑步，看到一大爷坐在石凳上，左手夹根烟，右手边一个摊开的塑料袋，立着两瓶啤酒，还有一个装着半杯酒的塑料杯。 “大叔，一个人喝酒啊” 没事</description>
     </item>
     
   </channel>
