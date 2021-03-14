@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>原则</title>
+      <title>债务危机</title>
       <link>https://stong1994.github.io/book/improve/A_Template_For_Understanding_BIG_DEBT_CRISES/</link>
       <pubDate>Sun, 28 Feb 2021 23:25:51 +0800</pubDate>
       
@@ -59,16 +59,6 @@
       
       <guid>https://stong1994.github.io/book/improve/the_effective_executive/</guid>
       <description>作者：彼得·德鲁克 豆瓣评分：8.7 微信评分：8.9 出版年: 2005-6 提纲 1. 谁是管理者 如果一个工作者能够凭借其职位和知识，对其组织负有贡献的责任并能够</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://stong1994.github.io/book/%E4%BA%92%E8%81%94%E7%BD%91%E7%B1%BB/process/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://stong1994.github.io/book/%E4%BA%92%E8%81%94%E7%BD%91%E7%B1%BB/process/</guid>
-      <description>一个线程组中所有的线程使用和该线程组的领头线程相同的PID，也就是该组中的第一个轻量级进程的PID。
-对每个进程，Linux都把两个不同的数据结构紧凑的放在一个单独为进程分配的存储区域内：一个是与进程描述符相关的小数据结构thread_info，即线程描述符，另一个是内核态的进程堆栈。这个存储区域通常为8192个字节，即两个页框。为了提升效率，内核让这8K空间占据连续的两个页框并让第一个页框的起始地址是2^13的倍数。</description>
     </item>
     
   </channel>
