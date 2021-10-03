@@ -6,7 +6,31 @@
     <description>Recent content on cristo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 01 Oct 2021 19:26:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 23:57:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>灰度网关</title>
+      <link>https://stong1994.github.io/internet/design/gray_gateway/</link>
+      <pubDate>Sun, 03 Oct 2021 23:57:00 +0800</pubDate>
+      
+      <guid>https://stong1994.github.io/internet/design/gray_gateway/</guid>
+      <description>背景 对于一个公司来说，在创业初期需要对产品快速迭代来解决用户痛点、提升自己的竞争力进而占领更多的市场（这就是MVP原则的思想）。随着业务的发展，早期的快速迭代导致了代码冗余、混乱、质量低、难以维护等问题，这时候就需要对其进行重构。
+但是重构会带来极大的风险，严重的会导致服务崩溃，甚至是数据混乱。这是我们不能接受的。
+尽管重构的风险是无法避免的，但是我们却可以通过管控流量将风险降到最低。这就用到了灰度网关。
+此外，灰度网关还支持A/B测试等其他方面的功能。
+功能简介  支持将旧服务的流量打到新服务 支持按照一定的比例来分配流量 支持按照header或者ip来分配流量 支持动态配置  正常情况下的流量走向 灰度后的流量走向 技术选型 开发网关，那首选就是openresty了。openresty是一个以nginx作为网络通信，以lua语言进行开发的平台，也可以理解为是一套可以通过lua语言对nginx进行扩展的生态。
+由于需要支持动态配置，因此需要一个配置中心，我们选择了consul（整体系统的配置中心都是用的consul）。
+开发思路 nginx执行阶段选择 先来回顾下nginx的11个执行阶段。
+openResty的11个*_by_lua指令，对应了nginx的11个执行阶段。以下是其应用场景：
+ init: 只会在 Master 进程被创建时执行 init_worker: 只会在每个 Worker 进程被创建时执行 ssl_certificate: 证书认证 set: 设置变量 rewrite: 转发、重定向 access：权限控制 content：生成内容返回 balancer：负载均衡 header_filter: 响应头过滤 body_filter: 响应体过滤 log: 日志记录  通过上图，我们可以得出结论：我们只能在set、rewrite、access这三个阶段进行灰度处理
+判断流量走向 首先，如果url没在配置中，那么流量一定是打入到原环境。
+如果url在配置中，那么流量需要按照比例判断是否打入到灰度环境还是原环境。
+判断url是否在配置：
+ 通过ngx.var.uri即可拿到访问url，然后再去配置中心进行匹配即可。  判断该请求打入到哪个环境：
+  在头部拿到token：ngx.req.get_headers()
+  如果token为空获取ip：
+local headers = ngx.req.get_headers() local ip = headers[&amp;#34;X-REAL-IP&amp;#34;] if ip == nil then ip = ngx.</description>
+    </item>
+    
     <item>
       <title>事件分发平台</title>
       <link>https://stong1994.github.io/internet/design/evps/</link>
