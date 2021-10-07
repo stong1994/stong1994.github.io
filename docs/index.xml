@@ -6,7 +6,30 @@
     <description>Recent content on cristo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 04 Oct 2021 22:32:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Oct 2021 20:20:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深度工作</title>
+      <link>https://stong1994.github.io/book/improve/deep_work/</link>
+      <pubDate>Thu, 07 Oct 2021 20:20:00 +0800</pubDate>
+      
+      <guid>https://stong1994.github.io/book/improve/deep_work/</guid>
+      <description>在十一小长假的最后一天，我终于翻开了这本放在书包里很多天的《深度工作》。 本来打算今天只看一半，没想到一口气花了约三个小时，把这本240页的书</description>
+    </item>
+    
+    <item>
+      <title>查询一条mysql都经历了什么</title>
+      <link>https://stong1994.github.io/internet/depth/mysql_query/</link>
+      <pubDate>Wed, 06 Oct 2021 17:05:00 +0800</pubDate>
+      
+      <guid>https://stong1994.github.io/internet/depth/mysql_query/</guid>
+      <description>在客户端执行一条mysql查询命令，到客户端接收到查询结果，这中间mysql服务器都做了哪些事情呢？
+先来了解下mysql体系架构。
+mysql体系架构 图片来自: https://segmentfault.com/a/1190000039693313
+以上图为对照，mysql的查询会经历大致以下过程：
+ 客户端与服务端建立连接 查询缓存 将请求的SQL进行解析，并进行语法校验 通过优化器来优化SQL，生成执行计划 选择对应的存储引擎来执行计划，获取数据 向客户端返回查询结果  那么我们就来分别看看这几步都做了哪些事情。
+建立连接 </description>
+    </item>
+    
     <item>
       <title>异地多活</title>
       <link>https://stong1994.github.io/internet/design/dboat/</link>

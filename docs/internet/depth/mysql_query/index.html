@@ -8,24 +8,42 @@
     
 
     
-    <meta name="description" content="">
+    <meta name="description" content="在客户端执行一条mysql查询命令，到客户端接收到查询结果，这中间mysql服务器都做了哪些事情呢？
+先来了解下mysql体系架构。
+mysql体系架构 图片来自: https://segmentfault.com/a/1190000039693313
+以上图为对照，mysql的查询会经历大致以下过程：
+ 客户端与服务端建立连接 查询缓存 将请求的SQL进行解析，并进行语法校验 通过优化器来优化SQL，生成执行计划 选择对应的存储引擎来执行计划，获取数据 向客户端返回查询结果  那么我们就来分别看看这几步都做了哪些事情。
+建立连接 ">
     <meta name="keywords" content="">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="查询一条mysql都经历了什么"/>
+<meta name="twitter:description" content="在客户端执行一条mysql查询命令，到客户端接收到查询结果，这中间mysql服务器都做了哪些事情呢？
+先来了解下mysql体系架构。
+mysql体系架构 图片来自: https://segmentfault.com/a/1190000039693313
+以上图为对照，mysql的查询会经历大致以下过程：
+ 客户端与服务端建立连接 查询缓存 将请求的SQL进行解析，并进行语法校验 通过优化器来优化SQL，生成执行计划 选择对应的存储引擎来执行计划，获取数据 向客户端返回查询结果  那么我们就来分别看看这几步都做了哪些事情。
+建立连接 "/>
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://stong1994.github.io/internet/" />
-<meta property="og:updated_time" content="2021-10-06T17:05:00+08:00" />
+    <meta property="og:title" content="查询一条mysql都经历了什么" />
+<meta property="og:description" content="在客户端执行一条mysql查询命令，到客户端接收到查询结果，这中间mysql服务器都做了哪些事情呢？
+先来了解下mysql体系架构。
+mysql体系架构 图片来自: https://segmentfault.com/a/1190000039693313
+以上图为对照，mysql的查询会经历大致以下过程：
+ 客户端与服务端建立连接 查询缓存 将请求的SQL进行解析，并进行语法校验 通过优化器来优化SQL，生成执行计划 选择对应的存储引擎来执行计划，获取数据 向客户端返回查询结果  那么我们就来分别看看这几步都做了哪些事情。
+建立连接 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stong1994.github.io/internet/depth/mysql_query/" />
+<meta property="article:published_time" content="2021-10-06T17:05:00+08:00" />
+<meta property="article:modified_time" content="2021-10-06T17:05:00+08:00" />
 
 
-    <title> · cristo</title>
+    <title>
+  查询一条mysql都经历了什么 · cristo
+</title>
 
     
-      <link rel="canonical" href="https://stong1994.github.io/internet/">
+      <link rel="canonical" href="https://stong1994.github.io/internet/depth/mysql_query/">
     
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -58,7 +76,6 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <link rel="alternate" type="application/rss+xml" href="/internet/index.xml" title="cristo" />
     
       <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
         integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
@@ -122,61 +139,33 @@
 
       <div class="content">
         
-  <section class="container list">
-  <h1 class="title"></h1>
-  
-  <ul>
-    
-    <li>
-      <span class="date">October 6, 2021</span>
-      <a class="title" href="/internet/depth/mysql_query/">查询一条mysql都经历了什么</a>
-    </li>
-    
-    <li>
-      <span class="date">October 4, 2021</span>
-      <a class="title" href="/internet/design/dboat/">异地多活</a>
-    </li>
-    
-    <li>
-      <span class="date">October 3, 2021</span>
-      <a class="title" href="/internet/design/gray_gateway/">灰度网关</a>
-    </li>
-    
-    <li>
-      <span class="date">October 1, 2021</span>
-      <a class="title" href="/internet/design/evps/">事件分发平台</a>
-    </li>
-    
-    <li>
-      <span class="date">September 30, 2021</span>
-      <a class="title" href="/internet/design/basepay/">统一支付系统</a>
-    </li>
-    
-    <li>
-      <span class="date">January 29, 2021</span>
-      <a class="title" href="/internet/ddd/practise/">DDD实战-笔记篇</a>
-    </li>
-    
-    <li>
-      <span class="date">January 29, 2021</span>
-      <a class="title" href="/internet/ddd/advance/">DDD进阶-笔记篇</a>
-    </li>
-    
-    <li>
-      <span class="date">January 29, 2021</span>
-      <a class="title" href="/internet/ddd/base/">DDD基础-笔记篇</a>
-    </li>
-    
-  </ul>
-  
+  <section class="container page">
+  <article>
+    <header>
+      <h1>查询一条mysql都经历了什么</h1>
+    </header>
 
+    <p>在客户端执行一条mysql查询命令，到客户端接收到查询结果，这中间mysql服务器都做了哪些事情呢？</p>
+<p>先来了解下mysql体系架构。</p>
+<h2 id="mysql体系架构">mysql体系架构</h2>
+<p><img src="https://raw.githubusercontent.com/stong1994/images/master/picgo/20211006171205.jfif" alt=""></p>
+<p><em>图片来自: <a href="https://segmentfault.com/a/1190000039693313">https://segmentfault.com/a/1190000039693313</a></em></p>
+<p>以上图为对照，mysql的查询会经历大致以下过程：</p>
+<ol>
+<li>客户端与服务端建立连接</li>
+<li>查询缓存</li>
+<li>将请求的SQL进行解析，并进行语法校验</li>
+<li>通过优化器来优化SQL，生成执行计划</li>
+<li>选择对应的存储引擎来执行计划，获取数据</li>
+<li>向客户端返回查询结果</li>
+</ol>
+<p>那么我们就来分别看看这几步都做了哪些事情。</p>
+<h2 id="建立连接">建立连接</h2>
 
-
-
-
-
+  </article>
 </section>
 
+  
 
       </div>
 
