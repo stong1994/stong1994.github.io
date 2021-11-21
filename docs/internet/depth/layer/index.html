@@ -34,8 +34,19 @@ MVC最早据说是起源于桌面端开发，M代表数据层，V代表UI层，C
 于是我们不仅有前后端的分层，还有后端与后端的分层——前台、中台、支撑的分层。
 回到我们的问题——为什么要分层——答案应该已经很明确了，就是为了解决代码的臃肿问题，让代码更清晰！
 怎样做分层 服务分层  现状：目前公司内有很多中台仅仅是对数据库的CRUD的封装（看起来就像是封装了一个使用http做传输的ORM框架），业务逻辑仍集中在前台。这种中台没有任何意义，似乎只是为了分层而分层，或者说为了做中台而分层。进一步的原因就是设计者对中台缺乏认知。
- 代码分层  现状：目前公司内大量项目的代码结构为controller&#43;business&#43;service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致大量本应位于service层的代码写到了business层中——导致本就复杂的业务层代码更加复杂且难以理解。
- 问题1：如何解决business和service的边界模糊问题">
+ 代码分层  现状：目前公司内大量项目的代码结构为controller&#43;business&#43;service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。
+这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致service层的代码和business层代码混在一起——导致本就复杂的业务层代码更加复杂且难以理解。
+ 问题：如何解决business和service的边界模糊问题
+边界模糊的原因1：词汇描述能力不足。我们一般使用service来写业务逻辑，现在换用了business，但是仍保留service层来做服务调用，这增加了开发者对service和business语义上的模糊。另外，从读者的角度来看，这种命名会让人十分疑惑。
+边界模糊的原因2：分层之间没有约束。目前在分层上business依赖并调用service层，没有约束business层对service层的访问限制，导致部分应属于service层的代码放到了business层，或者应属于business层的代码放到了service层。
+解决手段1：依赖倒置。要限制business对service层的访问，很自然会想到依赖倒置——让原本business层依赖service层的情况改为service层依赖business层。
+解决手段2：强化业务概念。为了避免service和business语义上的模糊，我们只保留了service，用来处理业务逻辑。那服务调用如何表示？为了突出业务逻辑层，我们弱化了服务调用层——将服务调用作为业务逻辑的辅助层。
+解决手段实现：端口-适配器模式非常契合当前的解决手段——将服务调用层抽象为适配器（adaptor），辅助业务逻辑层完成功能。将service层需要的外部资源（数据库、缓存、外部服务调用）抽象为接口，在adaptor层进行实现。即service层所需要的接口为“端口”，在adaptor层实现接口的对象为“适配器”。同时我们借助接口，实现了service层与adaptor的松耦合。（理解上述描述需要对go中的接口有一定了解）
+解决了历史问题，我们再进一步思考一个问题：如何处理复杂的业务逻辑。
+要解决这个问题，我们还是本能的选择了进一步分层。
+如何进一步分层？业务逻辑的复杂会导致service层代码臃肿，因此一定是在这一层进行切割。
+按照什么规则切割？service层中包含了业务规则和对外部资源的调用，因此我们可以将业务规则抽离出来。我把这一新层命名为domain（致敬DDD）。
+domain层的责任：如何在这一层中体现出业务规则来呢？业务逻辑的本质上就是对数据对象的转换，复杂的业务逻辑其转换规则也越复杂。因此合理的设计数据对象，并将这些转换规则封装为方法，将数据对象之间的转换对service层屏蔽是domain层存在的方式，也是其责任。">
     <meta name="keywords" content="">
 
     <meta name="twitter:card" content="summary"/>
@@ -66,8 +77,19 @@ MVC最早据说是起源于桌面端开发，M代表数据层，V代表UI层，C
 于是我们不仅有前后端的分层，还有后端与后端的分层——前台、中台、支撑的分层。
 回到我们的问题——为什么要分层——答案应该已经很明确了，就是为了解决代码的臃肿问题，让代码更清晰！
 怎样做分层 服务分层  现状：目前公司内有很多中台仅仅是对数据库的CRUD的封装（看起来就像是封装了一个使用http做传输的ORM框架），业务逻辑仍集中在前台。这种中台没有任何意义，似乎只是为了分层而分层，或者说为了做中台而分层。进一步的原因就是设计者对中台缺乏认知。
- 代码分层  现状：目前公司内大量项目的代码结构为controller&#43;business&#43;service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致大量本应位于service层的代码写到了business层中——导致本就复杂的业务层代码更加复杂且难以理解。
- 问题1：如何解决business和service的边界模糊问题"/>
+ 代码分层  现状：目前公司内大量项目的代码结构为controller&#43;business&#43;service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。
+这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致service层的代码和business层代码混在一起——导致本就复杂的业务层代码更加复杂且难以理解。
+ 问题：如何解决business和service的边界模糊问题
+边界模糊的原因1：词汇描述能力不足。我们一般使用service来写业务逻辑，现在换用了business，但是仍保留service层来做服务调用，这增加了开发者对service和business语义上的模糊。另外，从读者的角度来看，这种命名会让人十分疑惑。
+边界模糊的原因2：分层之间没有约束。目前在分层上business依赖并调用service层，没有约束business层对service层的访问限制，导致部分应属于service层的代码放到了business层，或者应属于business层的代码放到了service层。
+解决手段1：依赖倒置。要限制business对service层的访问，很自然会想到依赖倒置——让原本business层依赖service层的情况改为service层依赖business层。
+解决手段2：强化业务概念。为了避免service和business语义上的模糊，我们只保留了service，用来处理业务逻辑。那服务调用如何表示？为了突出业务逻辑层，我们弱化了服务调用层——将服务调用作为业务逻辑的辅助层。
+解决手段实现：端口-适配器模式非常契合当前的解决手段——将服务调用层抽象为适配器（adaptor），辅助业务逻辑层完成功能。将service层需要的外部资源（数据库、缓存、外部服务调用）抽象为接口，在adaptor层进行实现。即service层所需要的接口为“端口”，在adaptor层实现接口的对象为“适配器”。同时我们借助接口，实现了service层与adaptor的松耦合。（理解上述描述需要对go中的接口有一定了解）
+解决了历史问题，我们再进一步思考一个问题：如何处理复杂的业务逻辑。
+要解决这个问题，我们还是本能的选择了进一步分层。
+如何进一步分层？业务逻辑的复杂会导致service层代码臃肿，因此一定是在这一层进行切割。
+按照什么规则切割？service层中包含了业务规则和对外部资源的调用，因此我们可以将业务规则抽离出来。我把这一新层命名为domain（致敬DDD）。
+domain层的责任：如何在这一层中体现出业务规则来呢？业务逻辑的本质上就是对数据对象的转换，复杂的业务逻辑其转换规则也越复杂。因此合理的设计数据对象，并将这些转换规则封装为方法，将数据对象之间的转换对service层屏蔽是domain层存在的方式，也是其责任。"/>
 
     <meta property="og:title" content="浅谈分层" />
 <meta property="og:description" content="笔者在工作过程中遇到了一些分层相关的问题，于是将问题和想法记录下来，以供未来回顾。
@@ -96,8 +118,19 @@ MVC最早据说是起源于桌面端开发，M代表数据层，V代表UI层，C
 于是我们不仅有前后端的分层，还有后端与后端的分层——前台、中台、支撑的分层。
 回到我们的问题——为什么要分层——答案应该已经很明确了，就是为了解决代码的臃肿问题，让代码更清晰！
 怎样做分层 服务分层  现状：目前公司内有很多中台仅仅是对数据库的CRUD的封装（看起来就像是封装了一个使用http做传输的ORM框架），业务逻辑仍集中在前台。这种中台没有任何意义，似乎只是为了分层而分层，或者说为了做中台而分层。进一步的原因就是设计者对中台缺乏认知。
- 代码分层  现状：目前公司内大量项目的代码结构为controller&#43;business&#43;service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致大量本应位于service层的代码写到了business层中——导致本就复杂的业务层代码更加复杂且难以理解。
- 问题1：如何解决business和service的边界模糊问题" />
+ 代码分层  现状：目前公司内大量项目的代码结构为controller&#43;business&#43;service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。
+这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致service层的代码和business层代码混在一起——导致本就复杂的业务层代码更加复杂且难以理解。
+ 问题：如何解决business和service的边界模糊问题
+边界模糊的原因1：词汇描述能力不足。我们一般使用service来写业务逻辑，现在换用了business，但是仍保留service层来做服务调用，这增加了开发者对service和business语义上的模糊。另外，从读者的角度来看，这种命名会让人十分疑惑。
+边界模糊的原因2：分层之间没有约束。目前在分层上business依赖并调用service层，没有约束business层对service层的访问限制，导致部分应属于service层的代码放到了business层，或者应属于business层的代码放到了service层。
+解决手段1：依赖倒置。要限制business对service层的访问，很自然会想到依赖倒置——让原本business层依赖service层的情况改为service层依赖business层。
+解决手段2：强化业务概念。为了避免service和business语义上的模糊，我们只保留了service，用来处理业务逻辑。那服务调用如何表示？为了突出业务逻辑层，我们弱化了服务调用层——将服务调用作为业务逻辑的辅助层。
+解决手段实现：端口-适配器模式非常契合当前的解决手段——将服务调用层抽象为适配器（adaptor），辅助业务逻辑层完成功能。将service层需要的外部资源（数据库、缓存、外部服务调用）抽象为接口，在adaptor层进行实现。即service层所需要的接口为“端口”，在adaptor层实现接口的对象为“适配器”。同时我们借助接口，实现了service层与adaptor的松耦合。（理解上述描述需要对go中的接口有一定了解）
+解决了历史问题，我们再进一步思考一个问题：如何处理复杂的业务逻辑。
+要解决这个问题，我们还是本能的选择了进一步分层。
+如何进一步分层？业务逻辑的复杂会导致service层代码臃肿，因此一定是在这一层进行切割。
+按照什么规则切割？service层中包含了业务规则和对外部资源的调用，因此我们可以将业务规则抽离出来。我把这一新层命名为domain（致敬DDD）。
+domain层的责任：如何在这一层中体现出业务规则来呢？业务逻辑的本质上就是对数据对象的转换，复杂的业务逻辑其转换规则也越复杂。因此合理的设计数据对象，并将这些转换规则封装为方法，将数据对象之间的转换对service层屏蔽是domain层存在的方式，也是其责任。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stong1994.github.io/internet/depth/layer/" />
 <meta property="article:published_time" content="2021-11-20T13:20:00+08:00" />
@@ -260,9 +293,20 @@ MVC最早据说是起源于桌面端开发，M代表数据层，V代表UI层，C
 </blockquote>
 <h3 id="代码分层">代码分层</h3>
 <blockquote>
-<p>现状：目前公司内大量项目的代码结构为controller+business+service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致大量本应位于service层的代码写到了business层中——导致本就复杂的业务层代码更加复杂且难以理解。</p>
+<p>现状：目前公司内大量项目的代码结构为controller+business+service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。</p>
+<p>这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致service层的代码和business层代码混在一起——导致本就复杂的业务层代码更加复杂且难以理解。</p>
 </blockquote>
-<p><strong>问题1：如何解决business和service的边界模糊问题</strong></p>
+<p><strong>问题：如何解决business和service的边界模糊问题</strong></p>
+<p>边界模糊的原因1：<strong>词汇描述能力不足</strong>。我们一般使用service来写业务逻辑，现在换用了business，但是仍保留service层来做服务调用，这增加了开发者对service和business语义上的模糊。另外，从读者的角度来看，这种命名会让人十分疑惑。</p>
+<p>边界模糊的原因2：<strong>分层之间没有约束</strong>。目前在分层上business依赖并调用service层，没有约束business层对service层的访问限制，导致部分应属于service层的代码放到了business层，或者应属于business层的代码放到了service层。</p>
+<p>解决手段1：<strong>依赖倒置</strong>。要限制business对service层的访问，很自然会想到依赖倒置——让原本business层依赖service层的情况改为service层依赖business层。</p>
+<p>解决手段2：<strong>强化业务概念</strong>。为了避免service和business语义上的模糊，我们只保留了service，用来处理业务逻辑。那服务调用如何表示？为了突出业务逻辑层，我们弱化了服务调用层——将服务调用作为业务逻辑的辅助层。</p>
+<p>解决手段实现：<strong>端口-适配器模式</strong>非常契合当前的解决手段——将服务调用层抽象为适配器（adaptor），辅助业务逻辑层完成功能。将service层需要的外部资源（数据库、缓存、外部服务调用）抽象为<strong>接口</strong>，在adaptor层进行实现。即service层所需要的接口为“端口”，在adaptor层实现接口的对象为“适配器”。同时我们借助接口，实现了service层与adaptor的<strong>松耦合</strong>。（理解上述描述需要对go中的接口有一定了解）</p>
+<p>解决了历史问题，我们再进一步思考一个问题：<strong>如何处理复杂的业务逻辑</strong>。</p>
+<p>要解决这个问题，我们还是本能的选择了<strong>进一步分层</strong>。</p>
+<p>如何进一步分层？业务逻辑的复杂会导致service层代码臃肿，因此一定是在这一层进行切割。</p>
+<p>按照什么规则切割？service层中包含了业务规则和对外部资源的调用，因此我们可以将业务规则抽离出来。我把这一新层命名为domain（致敬DDD）。</p>
+<p><strong>domain层的责任</strong>：如何在这一层中体现出业务规则来呢？业务逻辑的本质上就是对数据对象的转换，复杂的业务逻辑其转换规则也越复杂。因此合理的设计数据对象，并将这些转换规则封装为方法，将数据对象之间的转换对service层屏蔽是domain层存在的方式，也是其责任。</p>
 
   </article>
 </section>
