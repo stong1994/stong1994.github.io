@@ -6,7 +6,42 @@
     <description>Recent content on cristo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 20 Nov 2021 13:20:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/internet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Nov 2021 16:05:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简述redis的基本实现</title>
+      <link>https://stong1994.github.io/internet/depth/redis_base_design/</link>
+      <pubDate>Mon, 22 Nov 2021 16:05:00 +0800</pubDate>
+      
+      <guid>https://stong1994.github.io/internet/depth/redis_base_design/</guid>
+      <description>很久之前就看过redis的基本设计与实现，但是每次都会忘掉。
+前几天又看了一遍，但是最近回顾的时候又忘了。。。
+俗话说好记性不如烂笔头，因此写在这里来加深记忆。
+文中会将数据类型的实现与go中的实现进行对比，如有理解错误的地方，望指出
+五个基本数据类型 string  go中的string：在go中，string就是一组字节，且是不可变的。可以视作字节数组。
+ redis中的字符串对象的编码可以是int、raw或embstr。
+如果保存的对象是整数且可以用long类型来表示，那么就保存为整数，编码为int。
+如果保存的对象是字符串且长度小于等于32字节，那么会使用embstr的编码来保存。
+如果保存的对象是字符串且长度大于32字节，那么会使用embstr的编码来保存，且存储在SDS中。
+embstr是专门用来保存短字符串的一种优化编码方式，与raw的区别在于对于redisObject和sdshdr（redisObject是redis对象中的一个属性，sdshdr是SDS的实现结构），embstr只需一次内存分配，而raw需要两次。
+SDS 简单动态字符串（SDS）组成：
+ buf: 字节数组 len: 字符串长度（即buf数组中已使用的字节数量） free: buf数组中未使用的字节数量  SDS遵循C字符串以空字符结尾的惯例，保存空字符串的1字节空间不计算在SDS的属性中。
+空间预分配策略：修改之后的SDS长度小于1M，那么程序会分配同样大小的预留空间，即len=free；如果修改之后的SDS长度大于1M，那么程序会分配1M的预留空间。
+空间惰性释放策略：SDS中的字符串长度减小时，并不直接释放空间，而是增大free，可供未来使用，避免频繁释放/分配空间。
+list  go中的slice
+构成：由三个属性构成：长度、容量、底层数组。
+扩容策略：当容量小于1024时，每次扩容为原来容量的一倍；否则扩容1/4
+缩容策略：无
+ 当list中元素的字符串长度都小于64字节且元素数量小于512时，使用压缩列表实现，否则使用双端链表实现。
+双端链表 双端链表有如下几个属性：
+ 表头节点 表尾结点 节点长度 节点复制函数 节点释放函数 节点值对比函数  节点有如下属性：
+  前置节点地址
+  后置节点地址
+  节点值
+  压缩列表 压缩列表包含的属性：
+ 整个压缩列表占用的字节数 计算列表尾结点距离压缩列表的起始地址有多少字节 记录压缩列表包含的节点的数量（当总数大于65535时，这个字段失效，需要遍历整个压缩列表才能计算出来） 列表节点数组（每个节点可以保存为一个字节数组或者整数）  列表节点包含的属性：
+ 上一个节点的长度 编码类型与长度 节点内容  压缩列表的优点就是节省内存，缺点就是增加、删除、更新可能会造成“连锁更新”，因此只有在包含少量元素时才使用。</description>
+    </item>
+    
     <item>
       <title>以真实经历谈分层</title>
       <link>https://stong1994.github.io/internet/depth/layer/</link>
@@ -31,7 +66,7 @@
 直到有一天，我们写了上千行的代码，突然发现代码已经很难维护了，因为数据模型、业务逻辑、前端代码等都混在一起，于是我们本能的开始分层。于是一个伟大的概念产生了——MVC。
 MVC最早据说是起源于桌面端开发，M代表数据层，V代表UI层，C代码控制层，通过分离这三层，我们的代码已经是很清晰了。
 但是该死的产品经理还在没完没了的增加那些不知道有什么用的功能。
-于是代码开发者发现三层不够用，于是把前端和后端代码进行了隔离，也就是前后端分离。后端仍旧是分层，不过是改为了控制层-逻辑层-数据层（controller-service-model）。那么前端呢？前端都分出去了，我们就不管了。
+于是代码开发者发现三层不够用，于是把前端和后端代码进行了隔离，也就是前后端分离。后端将已有的两层扩展为三层——控制层-逻辑层-数据层（controller-service-model）。那么前端呢？前端都分出去了，我们就不管了。
  这里有个逻辑要叙述下。有些人认为是ajax这类技术的产生才导致了前后端分离。这种想法属实是本末倒置了，任何技术的产生都来源于需求！
  我对于controller-service-model这种分层可谓是异常熟悉，因为就在我大学实习的时候，就用的这种分层。当时用得是java的SSM框架，三个框架正好对应这三层（java好像搞啥都是一整套？）。这几个框架让我深受贫血模型的影响，即使我后来不写Java了。
 时代在发展，软件的用户越来越多，功能越来越复杂，开发人员越来越多。代码也越来越臃肿。
@@ -54,20 +89,6 @@ MVC最早据说是起源于桌面端开发，M代表数据层，V代表UI层，C
 代码分层  现状：目前公司内大量项目的代码结构为controller+business+service。business做业务逻辑，service做服务实现。换句话说，就是将以前的service层改名为business，以前的model改名为service。这种改变的逻辑是：微服务时代需要大量调用其他服务，model不具有此含义，因此需要将model改名为service，用service来处理调用其他服务的逻辑。
 这种结构在实际开发中面临一个非常严重的问题——business和service的边界模糊——导致service层的代码和business层代码混在一起——导致本就复杂的业务层代码更加复杂且难以理解。
  如何解决business和service的边界模糊问题 边界模糊的原因1：词汇描述能力不足。我们一般使用service来写业务逻辑，现在换用了business，但是仍保留service层来做服务调用，这增加了开发者对service和business语义上的模糊。另外，从读者的角度来看，这种命名会让人十分疑惑。</description>
-    </item>
-    
-    <item>
-      <title>查询一条mysql都经历了什么</title>
-      <link>https://stong1994.github.io/internet/depth/mysql_query/</link>
-      <pubDate>Wed, 06 Oct 2021 17:05:00 +0800</pubDate>
-      
-      <guid>https://stong1994.github.io/internet/depth/mysql_query/</guid>
-      <description>在客户端执行一条mysql查询命令，到客户端接收到查询结果，这中间mysql服务器都做了哪些事情呢？
-先来了解下mysql体系架构。
-mysql体系架构 图片来自: https://segmentfault.com/a/1190000039693313
-以上图为对照，mysql的查询会经历大致以下过程：
- 客户端与服务端建立连接 查询缓存 将请求的SQL进行解析，并进行语法校验 通过优化器来优化SQL，生成执行计划 选择对应的存储引擎来执行计划，获取数据 向客户端返回查询结果  那么我们就来分别看看这几步都做了哪些事情。
-建立连接 </description>
     </item>
     
     <item>
