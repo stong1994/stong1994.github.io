@@ -2,12 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://stong1994.github.io/book/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://stong1994.github.io/tag/anthropology/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/authors/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/category/c_anthropology/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/category/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/authors/cristo/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/tag/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/book/anthropology/TheChrysanthemumAndTheSword/</loc>
+    <lastmod>2021-12-12T21:36:00+08:00</lastmod>
+  </url><url>
     <loc>https://stong1994.github.io/internet/</loc>
     <lastmod>2021-11-22T16:05:00+08:00</lastmod>
     <priority>0</priority>
-  </url><url>
-    <loc>https://stong1994.github.io/</loc>
-    <lastmod>2021-11-22T16:05:00+08:00</lastmod>
   </url><url>
     <loc>https://stong1994.github.io/internet/depth/redis_base_design/</loc>
     <lastmod>2021-11-22T16:05:00+08:00</lastmod>
@@ -19,26 +44,10 @@
     <lastmod>2021-11-14T18:07:00+08:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://stong1994.github.io/authors/</loc>
-    <lastmod>2021-11-14T18:07:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/authors/cristo/</loc>
-    <lastmod>2021-11-14T18:07:00+08:00</lastmod>
-  </url><url>
     <loc>https://stong1994.github.io/life/qi/</loc>
     <lastmod>2021-11-14T18:07:00+08:00</lastmod>
   </url><url>
-    <loc>https://stong1994.github.io/book/</loc>
-    <lastmod>2021-10-07T20:20:00+08:00</lastmod>
-    <priority>0</priority>
-  </url><url>
     <loc>https://stong1994.github.io/category/c_improve/</loc>
-    <lastmod>2021-10-07T20:20:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/category/</loc>
-    <lastmod>2021-10-07T20:20:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/tag/</loc>
     <lastmod>2021-10-07T20:20:00+08:00</lastmod>
   </url><url>
     <loc>https://stong1994.github.io/tag/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</loc>
@@ -105,6 +114,9 @@
     <lastmod>2021-01-29T23:07:51+08:00</lastmod>
   </url><url>
     <loc>https://stong1994.github.io/life/how_to_code_without_bug/</loc>
+    <lastmod>2020-12-04T23:31:51+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/life/long_alive_record_with_night_run/</loc>
     <lastmod>2020-12-04T23:31:51+08:00</lastmod>
   </url><url>
     <loc>https://stong1994.github.io/about/</loc>
