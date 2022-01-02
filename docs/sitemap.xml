@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://stong1994.github.io/book/</loc>
+    <lastmod>2022-01-02T16:24:00+08:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://stong1994.github.io/authors/</loc>
+    <lastmod>2022-01-02T16:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/authors/cristo/</loc>
+    <lastmod>2022-01-02T16:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/</loc>
+    <lastmod>2022-01-02T16:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/book/philosophy/critical_path/</loc>
+    <lastmod>2022-01-02T16:24:00+08:00</lastmod>
+  </url><url>
     <loc>https://stong1994.github.io/life/</loc>
     <lastmod>2021-12-19T23:39:00+08:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://stong1994.github.io/authors/</loc>
-    <lastmod>2021-12-19T23:39:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/authors/cristo/</loc>
-    <lastmod>2021-12-19T23:39:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/</loc>
-    <lastmod>2021-12-19T23:39:00+08:00</lastmod>
-  </url><url>
     <loc>https://stong1994.github.io/life/run_with_time/</loc>
     <lastmod>2021-12-19T23:39:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/book/</loc>
-    <lastmod>2021-12-17T13:57:00+08:00</lastmod>
-    <priority>0</priority>
   </url><url>
     <loc>https://stong1994.github.io/book/improve/hr_three-pillar-mode/</loc>
     <lastmod>2021-12-17T13:57:00+08:00</lastmod>
