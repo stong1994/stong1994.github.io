@@ -6,7 +6,16 @@
     <description>Recent content on cristo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 04 Jan 2022 16:24:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/authors/cristo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jan 2022 17:25:00 +0800</lastBuildDate><atom:link href="https://stong1994.github.io/authors/cristo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决问题时的短路问题</title>
+      <link>https://stong1994.github.io/life/short_circuit_when_solve_problem/</link>
+      <pubDate>Sun, 09 Jan 2022 17:25:00 +0800</pubDate>
+      
+      <guid>https://stong1994.github.io/life/short_circuit_when_solve_problem/</guid>
+      <description>场景描述 前一阵子做企业微信的组织和人员同步，上线后本来是风平浪静，直到有天接到一个工单：有家企业的部分员工的部门没有同步过去。 工单描述的有点</description>
+    </item>
+    
     <item>
       <title>《洞见》</title>
       <link>https://stong1994.github.io/book/philosophy/why_buddhism_is_true/</link>
@@ -158,15 +167,6 @@
       
       <guid>https://stong1994.github.io/life/how_to_code_without_bug/</guid>
       <description>作为一名程序员，bug就是我们生活的一部分。 一听到有bug，绝大分程序员的血压会立马上升，紧接着心脏跳动加快，然后带着一丝侥幸的期待着这是个</description>
-    </item>
-    
-    <item>
-      <title>如何避免掉进程序员陷阱</title>
-      <link>https://stong1994.github.io/life/long_alive_record_with_night_run/</link>
-      <pubDate>Fri, 04 Dec 2020 23:31:51 +0800</pubDate>
-      
-      <guid>https://stong1994.github.io/life/long_alive_record_with_night_run/</guid>
-      <description>前一阵子知乎上的一个问题引起了不少讨论，问题是这样的——国家何时会像打击教育一样整治程序员的高薪现象 再往前则有一个更大的论点在互联网圈疯传—</description>
     </item>
     
   </channel>
