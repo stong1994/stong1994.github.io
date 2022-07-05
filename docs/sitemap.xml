@@ -2,14 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://stong1994.github.io/life/</loc>
+    <lastmod>2022-07-05T15:35:00+08:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://stong1994.github.io/authors/</loc>
+    <lastmod>2022-07-05T15:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/authors/stone/</loc>
+    <lastmod>2022-07-05T15:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/</loc>
+    <lastmod>2022-07-05T15:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://stong1994.github.io/life/boss_emp_invalid_communicate/</loc>
+    <lastmod>2022-07-05T15:35:00+08:00</lastmod>
+  </url><url>
     <loc>https://stong1994.github.io/book/</loc>
     <lastmod>2022-06-27T07:36:00+08:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://stong1994.github.io/tag/anthropology/</loc>
-    <lastmod>2022-06-27T07:36:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/authors/</loc>
     <lastmod>2022-06-27T07:36:00+08:00</lastmod>
   </url><url>
     <loc>https://stong1994.github.io/category/c_anthropology/</loc>
@@ -18,21 +31,11 @@
     <loc>https://stong1994.github.io/category/</loc>
     <lastmod>2022-06-27T07:36:00+08:00</lastmod>
   </url><url>
-    <loc>https://stong1994.github.io/authors/stone/</loc>
-    <lastmod>2022-06-27T07:36:00+08:00</lastmod>
-  </url><url>
     <loc>https://stong1994.github.io/tag/</loc>
     <lastmod>2022-06-27T07:36:00+08:00</lastmod>
   </url><url>
     <loc>https://stong1994.github.io/book/anthropology/global_tech_history/</loc>
     <lastmod>2022-06-27T07:36:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/</loc>
-    <lastmod>2022-06-27T07:36:00+08:00</lastmod>
-  </url><url>
-    <loc>https://stong1994.github.io/life/</loc>
-    <lastmod>2022-06-22T10:23:00+08:00</lastmod>
-    <priority>0</priority>
   </url><url>
     <loc>https://stong1994.github.io/authors/atong/</loc>
     <lastmod>2022-06-22T10:23:00+08:00</lastmod>
