@@ -5,21 +5,28 @@
     
       <url>
             <loc>/internet/</loc>
-            <lastmod>2023-04-21T10:00:00+08:00</lastmod>
+            <lastmod>2023-04-28T16:32:00+08:00</lastmod>
             <priority>0</priority>
           </url>
     
   
     
       <url>
-            <loc>/internet/algorithm/12boll/</loc>
-            <lastmod>2023-04-21T10:00:00+08:00</lastmod>
+            <loc>/internet/algorithm/read_black_tree/</loc>
+            <lastmod>2023-04-28T16:32:00+08:00</lastmod>
           </url>
     
   
     
       <url>
             <loc>/</loc>
+            <lastmod>2023-04-28T16:32:00+08:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/internet/algorithm/12boll/</loc>
             <lastmod>2023-04-21T10:00:00+08:00</lastmod>
           </url>
     
@@ -202,7 +209,7 @@
   
     
       <url>
-            <loc>/other/book/</loc>
+            <loc>/book/</loc>
             <lastmod>2022-11-07T18:30:00+08:00</lastmod>
             <priority>0</priority>
           </url>
