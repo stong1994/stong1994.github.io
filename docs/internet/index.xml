@@ -6,7 +6,16 @@
     <description>Recent content on 主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 May 2023 11:30:00 +0800</lastBuildDate><atom:link href="/internet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 May 2023 14:36:00 +0800</lastBuildDate><atom:link href="/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trie簇基本介绍</title>
+      <link>/internet/design/trie_intro/</link>
+      <pubDate>Tue, 30 May 2023 14:36:00 +0800</pubDate>
+      
+      <guid>/internet/design/trie_intro/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CVP架构</title>
       <link>/internet/ai/law-ai-cvp/</link>
