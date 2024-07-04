@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>Rust中的惰性计算 &middot; </title>
-    <meta name="title" content="Rust中的惰性计算 &middot; " />
+  <title>go中管理服务依赖的dig工具 &middot; </title>
+    <meta name="title" content="go中管理服务依赖的dig工具 &middot; " />
   
   
   
@@ -74,13 +74,13 @@
   <meta
     name="description"
     content="
-      Rust中的惰性计算
+      go中管理服务依赖的dig工具
     "
   />
   
   
   
-  <link rel="canonical" href="/internet/rust/lay_evaluation/" />
+  <link rel="canonical" href="/internet/design/dig/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -95,23 +95,23 @@
   
   
   
-  <meta property="og:url" content="/internet/rust/lay_evaluation/">
+  <meta property="og:url" content="/internet/design/dig/">
   <meta property="og:site_name" content="主页">
-  <meta property="og:title" content="Rust中的惰性计算">
-  <meta property="og:description" content="Rust中的惰性计算">
+  <meta property="og:title" content="go中管理服务依赖的dig工具">
+  <meta property="og:description" content="go中管理服务依赖的dig工具">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="internet">
-    <meta property="article:published_time" content="2024-07-01T10:43:00+08:00">
-    <meta property="article:modified_time" content="2024-07-01T10:43:00+08:00">
-    <meta property="article:tag" content="惰性计算">
-    <meta property="article:tag" content="Rust">
-    <meta property="article:tag" content="Lazy Evaluation">
+    <meta property="article:published_time" content="2024-07-04T12:43:00+08:00">
+    <meta property="article:modified_time" content="2024-07-04T12:43:00+08:00">
+    <meta property="article:tag" content="Dig">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="服务依赖">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Rust中的惰性计算">
-  <meta name="twitter:description" content="Rust中的惰性计算">
+  <meta name="twitter:title" content="go中管理服务依赖的dig工具">
+  <meta name="twitter:description" content="go中管理服务依赖的dig工具">
 
   
   <script type="application/ld+json">
@@ -119,26 +119,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "",
-    "name": "Rust中的惰性计算",
-    "headline": "Rust中的惰性计算",
-    "description": "Rust中的惰性计算",
+    "name": "go中管理服务依赖的dig工具",
+    "headline": "go中管理服务依赖的dig工具",
+    "description": "go中管理服务依赖的dig工具",
     
     "inLanguage": "en",
-    "url" : "\/internet\/rust\/lay_evaluation\/",
+    "url" : "\/internet\/design\/dig\/",
     "author" : {
       "@type": "Person",
       "name": "stong"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-07-01T10:43:00\u002b08:00",
-    "datePublished": "2024-07-01T10:43:00\u002b08:00",
+    "dateCreated": "2024-07-04T12:43:00\u002b08:00",
+    "datePublished": "2024-07-04T12:43:00\u002b08:00",
     
-    "dateModified": "2024-07-01T10:43:00\u002b08:00",
+    "dateModified": "2024-07-04T12:43:00\u002b08:00",
     
-    "keywords": ["惰性计算","rust","lazy evaluation"],
+    "keywords": ["dig","go","服务依赖"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1320"
+    "wordCount": "1317"
   }
   </script>
 
@@ -619,8 +619,8 @@
   <li class="hidden inline">
     <a
       class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
-      href="/internet/rust/lay_evaluation/"
-      >Rust中的惰性计算</a
+      href="/internet/design/dig/"
+      >go中管理服务依赖的dig工具</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -629,7 +629,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Rust中的惰性计算
+        go中管理服务依赖的dig工具
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -669,7 +669,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-07-01 10:43:00 &#43;0800 CST">1 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1320 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2024-07-04 12:43:00 &#43;0800 CST">4 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1317 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -677,7 +677,7 @@
 
 <span class="mb-[2px]">
   <a
-    href="https://github.com/stong1994/cristo/content/internet/rust/rust%e4%b8%ad%e7%9a%84%e6%83%b0%e6%80%a7%e8%ae%a1%e7%ae%97.md"
+    href="https://github.com/stong1994/cristo/content/internet/design/go%e4%b8%ad%e7%ae%a1%e7%90%86%e6%9c%8d%e5%8a%a1%e4%be%9d%e8%b5%96%e7%9a%84dig%e5%b7%a5%e5%85%b7.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -701,21 +701,21 @@
         
           
             <a
-              href="/tags/%E6%83%B0%E6%80%A7%E8%AE%A1%E7%AE%97/"
+              href="/tags/dig/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >惰性计算</a
+              >Dig</a
             >
           
             <a
-              href="/tags/rust/"
+              href="/tags/go/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Rust</a
+              >Go</a
             >
           
             <a
-              href="/tags/lazy-evaluation/"
+              href="/tags/%E6%9C%8D%E5%8A%A1%E4%BE%9D%E8%B5%96/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Lazy Evaluation</a
+              >服务依赖</a
             >
           
         
@@ -743,9 +743,24 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#什么是惰性计算lazy-evaluation">什么是惰性计算（lazy evaluation）</a></li>
-        <li><a href="#一个代码块只做一件事">一个代码块只做一件事</a></li>
-        <li><a href="#感受下haskell的魅力">感受下Haskell的魅力</a></li>
+        <li><a href="#为什么要用dig">为什么要用dig</a>
+          <ul>
+            <li><a href="#1-抽象数据库接口">1. 抽象数据库接口</a></li>
+            <li><a href="#2-抽象用户系统接口">2. 抽象用户系统接口</a></li>
+            <li><a href="#3-集成到订单服务">3. 集成到订单服务</a></li>
+            <li><a href="#4-实现数据库接口">4. 实现数据库接口</a></li>
+            <li><a href="#5-实现用户系统接口">5. 实现用户系统接口</a></li>
+            <li><a href="#6-依赖注入">6. 依赖注入</a></li>
+            <li><a href="#7-更复杂的状况">7. 更复杂的状况</a></li>
+            <li><a href="#用-dig-优化">用 dig 优化</a></li>
+          </ul>
+        </li>
+        <li><a href="#dig的常用用法">dig的常用用法</a>
+          <ul>
+            <li><a href="#1-一个对象对应多个接口">1. 一个对象对应多个接口</a></li>
+          </ul>
+        </li>
+        <li><a href="#其他">其他</a></li>
       </ul>
     </li>
   </ul>
@@ -757,104 +772,146 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <h2 id="什么是惰性计算lazy-evaluation" class="relative group">什么是惰性计算（lazy evaluation） <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%83%b0%e6%80%a7%e8%ae%a1%e7%ae%97lazy-evaluation" aria-label="Anchor">#</a></span></h2><blockquote>
-<p>惰性计算是一种程序设计，其中表达式的计算被推迟到它们的值被需要的时候。这种技术可以用来提高性能，因为它允许程序只计算那些真正需要的值。</p>
+        <h2 id="为什么要用dig" class="relative group">为什么要用dig <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e7%94%a8dig" aria-label="Anchor">#</a></span></h2><p>我们来模拟一个订单系统，在最一开始的版本中，它只依赖用户系统和数据库。</p>
+<h3 id="1-抽象数据库接口" class="relative group">1. 抽象数据库接口 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%e6%8a%bd%e8%b1%a1%e6%95%b0%e6%8d%ae%e5%ba%93%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Order</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ID</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Repo</span> <span class="kd">interface</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">Get</span><span class="p">()</span> <span class="nx">Order</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">Set</span><span class="p">(</span><span class="nx">Order</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="2-抽象用户系统接口" class="relative group">2. 抽象用户系统接口 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%e6%8a%bd%e8%b1%a1%e7%94%a8%e6%88%b7%e7%b3%bb%e7%bb%9f%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">User</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Name</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">UserService</span> <span class="kd">interface</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">GetUser</span><span class="p">()</span> <span class="nx">User</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="3-集成到订单服务" class="relative group">3. 集成到订单服务 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%e9%9b%86%e6%88%90%e5%88%b0%e8%ae%a2%e5%8d%95%e6%9c%8d%e5%8a%a1" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">OrderService</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">repo</span>        <span class="nx">Repo</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">userService</span> <span class="nx">UserService</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">NewOrderService</span><span class="p">(</span><span class="nx">repo</span> <span class="nx">Repo</span><span class="p">,</span> <span class="nx">userService</span> <span class="nx">UserService</span><span class="p">)</span> <span class="o">*</span><span class="nx">OrderService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">OrderService</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">repo</span><span class="p">:</span>        <span class="nx">repo</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">userService</span><span class="p">:</span> <span class="nx">userService</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">o</span> <span class="o">*</span><span class="nx">OrderService</span><span class="p">)</span> <span class="nf">HandleOrder</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// handle order
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><blockquote>
+<p>这里我们通过抽象接口来实现了依赖倒置原则，使得订单服务不依赖具体的实现，整体服务更添加解耦。</p>
 </blockquote>
-<p>Rust中的<strong>迭代器</strong>就使用了（或者说实现了）这种设计.</p>
-<p>举个例子：假设有一个数组，我们想对数组中的每一个元素进行平方，然后再将结果转换为字符串，最后将结果收集到一个新的数组中。在Rust中，我们可以使用迭代器来实现这个功能。这样做的好处是，我们可以在每个元素上执行一个操作，而不必在内存中保存中间结果。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">nums</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">into_iter</span><span class="p">()</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">to_string</span><span class="p">())</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">collect</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{:?}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">nums</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>让我们逐步看下这段代码：</p>
+<h3 id="4-实现数据库接口" class="relative group">4. 实现数据库接口 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%e5%ae%9e%e7%8e%b0%e6%95%b0%e6%8d%ae%e5%ba%93%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">RepoImpl</span> <span class="kd">struct</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">NewRepoImpl</span><span class="p">()</span> <span class="o">*</span><span class="nx">RepoImpl</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">RepoImpl</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">RepoImpl</span><span class="p">)</span> <span class="nf">Get</span><span class="p">()</span> <span class="nx">Order</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">Order</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">RepoImpl</span><span class="p">)</span> <span class="nf">Set</span><span class="p">(</span><span class="nx">o</span> <span class="nx">Order</span><span class="p">)</span> <span class="p">{}</span>
+</span></span></code></pre></div><h3 id="5-实现用户系统接口" class="relative group">5. 实现用户系统接口 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-%e5%ae%9e%e7%8e%b0%e7%94%a8%e6%88%b7%e7%b3%bb%e7%bb%9f%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">UserServiceImpl</span> <span class="kd">struct</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">NewUserServiceImpl</span><span class="p">()</span> <span class="o">*</span><span class="nx">UserServiceImpl</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">UserServiceImpl</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">u</span> <span class="o">*</span><span class="nx">UserServiceImpl</span><span class="p">)</span> <span class="nf">GetUser</span><span class="p">()</span> <span class="nx">User</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">User</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="6-依赖注入" class="relative group">6. 依赖注入 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-%e4%be%9d%e8%b5%96%e6%b3%a8%e5%85%a5" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">repo</span> <span class="o">:=</span> <span class="nf">NewRepoImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">userService</span> <span class="o">:=</span> <span class="nf">NewUserServiceImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">order</span> <span class="o">:=</span> <span class="nf">NewOrderService</span><span class="p">(</span><span class="nx">repo</span><span class="p">,</span> <span class="nx">userService</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">_</span> <span class="p">=</span> <span class="nx">order</span> <span class="c1">// do somehing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h3 id="7-更复杂的状况" class="relative group">7. 更复杂的状况 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-%e6%9b%b4%e5%a4%8d%e6%9d%82%e7%9a%84%e7%8a%b6%e5%86%b5" aria-label="Anchor">#</a></span></h3><p>目前来看，整个系统的依赖关系还是比较简单的，但是随着系统的增长，依赖关系会变得越来越复杂，比如说在后续的迭代中我们会加入缓存服务、搜索系统、邮件系统、通知系统等等（为了”轻量化“讲解，我们不再模拟更复杂的现实系统）。这时候构造订单服务的构造器会变成这个样子：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">OrderService</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">repo</span>          <span class="nx">Repo</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">userService</span>   <span class="nx">UserService</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">cache</span>         <span class="nx">Cache</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">emailService</span>  <span class="nx">EmailService</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">searchService</span> <span class="nx">SearchService</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">noticeService</span> <span class="nx">NoticeService</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">NewOrderService</span><span class="p">(</span><span class="nx">repo</span> <span class="nx">Repo</span><span class="p">,</span> <span class="nx">userService</span> <span class="nx">UserService</span><span class="p">,</span> <span class="nx">cache</span> <span class="nx">Cache</span><span class="p">,</span> <span class="nx">emailService</span> <span class="nx">EmailService</span><span class="p">,</span> <span class="nx">searchService</span> <span class="nx">SearchService</span><span class="p">,</span> <span class="nx">noticeSerivce</span> <span class="nx">NoticeService</span><span class="p">)</span> <span class="o">*</span><span class="nx">OrderService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">&amp;</span><span class="nx">OrderService</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">repo</span><span class="p">:</span>          <span class="nx">repo</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">userService</span><span class="p">:</span>   <span class="nx">userService</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">cache</span><span class="p">:</span>         <span class="nx">cache</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">emailService</span><span class="p">:</span>  <span class="nx">emailService</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">searchService</span><span class="p">:</span> <span class="nx">searchService</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">noticeService</span><span class="p">:</span> <span class="nx">noticeSerivce</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>初始化的时候会变成这样：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">repo</span> <span class="o">:=</span> <span class="nf">NewRepoImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">userService</span> <span class="o">:=</span> <span class="nf">NewUserServiceImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">cache</span> <span class="o">:=</span> <span class="nf">NewCacheImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">emailService</span> <span class="o">:=</span> <span class="nf">NewEmailServiceImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">searchService</span> <span class="o">:=</span> <span class="nf">NewSearchServiceImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">noticService</span> <span class="o">:=</span> <span class="nf">NewNoticeServiceImpl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">order</span> <span class="o">:=</span> <span class="nf">NewOrderService</span><span class="p">(</span><span class="nx">repo</span><span class="p">,</span> <span class="nx">userService</span><span class="p">,</span> <span class="nx">cache</span><span class="p">,</span> <span class="nx">emailService</span><span class="p">,</span> <span class="nx">searchService</span><span class="p">,</span> <span class="nx">noticService</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">_</span> <span class="p">=</span> <span class="nx">order</span> <span class="c1">// do somehing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>已经开始变得有点复杂了。
+一般来说，这个系统中不仅仅有订单服务，还会有其他模块（尤其是在使用DDD设计的系统中）,这些模块可以复用底层依赖，比如说我们有一个定时服务,它依赖了数据库服务、用户系统、缓存服务、邮件服务、通知服务：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">timer</span> <span class="o">:=</span> <span class="nf">NewTimerService</span><span class="p">(</span><span class="nx">repo</span><span class="p">,</span> <span class="nx">userService</span><span class="p">,</span> <span class="nx">cache</span><span class="p">,</span> <span class="nx">emailService</span><span class="p">,</span> <span class="nx">noticService</span><span class="p">)</span>
+</span></span></code></pre></div><p>依赖注入已经有点臃肿了，可以想象一下比这个复杂10倍的真实系统中，依赖注入会多么的臃肿！</p>
+<h3 id="用-dig-优化" class="relative group">用 dig 优化 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%94%a8-dig-%e4%bc%98%e5%8c%96" aria-label="Anchor">#</a></span></h3><p>其实我们可以不用手动进行依赖注入！
+我们只需要把每个依赖放到一个大的池子中，标注好它的类型，然后在依赖注入时根据所需的类型从这个池子里拿出来就可以了！
+这就是dig的基本原理。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span> <span class="o">:=</span> <span class="nx">dig</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="nx">NewRepoImpl</span><span class="p">,</span> <span class="nx">dig</span><span class="p">.</span><span class="nf">As</span><span class="p">(</span><span class="nb">new</span><span class="p">(</span><span class="nx">Repo</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="nx">NewUserServiceImpl</span><span class="p">,</span> <span class="nx">dig</span><span class="p">.</span><span class="nf">As</span><span class="p">(</span><span class="nb">new</span><span class="p">(</span><span class="nx">UserService</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="nx">NewOrderService</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">.</span><span class="nf">Invoke</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">orderService</span> <span class="o">*</span><span class="nx">OrderService</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;hi there&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">_</span> <span class="p">=</span> <span class="nx">orderService</span> <span class="c1">// do somehing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>通过<code>Provide</code>来将构造器存入<code>dig的container</code>中，dig会自动解析依赖关系，按照指定类型(<code>dig.As</code>)生成对应的对象，然后就可以通过<code>Invode</code>来获取所需要的对象。
+可以看到整个代码中，没有手动进行依赖注入，而是通过<code>dig</code>来自动解析依赖关系，这样就避免了手动注入的臃肿。</p>
+<h2 id="dig的常用用法" class="relative group">dig的常用用法 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dig%e7%9a%84%e5%b8%b8%e7%94%a8%e7%94%a8%e6%b3%95" aria-label="Anchor">#</a></span></h2><h3 id="1-一个对象对应多个接口" class="relative group">1. 一个对象对应多个接口 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%e4%b8%80%e4%b8%aa%e5%af%b9%e8%b1%a1%e5%af%b9%e5%ba%94%e5%a4%9a%e4%b8%aa%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a></span></h3><p>比如说在订单服务和定时服务中都要用到用户系统，所以各自都抽象了自己的用户系统接口，这时可以在<code>dig.As</code>中传入多个类型：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="nx">NewUserServiceImpl</span><span class="p">,</span> <span class="nx">dig</span><span class="p">.</span><span class="nf">As</span><span class="p">(</span><span class="nb">new</span><span class="p">(</span><span class="nx">order</span><span class="p">.</span><span class="nx">UserService</span><span class="p">),</span> <span class="nb">new</span><span class="p">(</span><span class="nx">timer</span><span class="p">.</span><span class="nx">UserService</span><span class="p">)))</span>
+</span></span></code></pre></div><p>但是，如果你需要嵌入<code>NewUserServiceImpl</code>函数生成的原始类型，即<code>*UserServiceImpl</code>,则还需要额外的<code>Provide</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">  <span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="nx">NewUserServiceImpl</span><span class="p">,</span> <span class="nx">dig</span><span class="p">.</span><span class="nf">As</span><span class="p">(</span><span class="nb">new</span><span class="p">(</span><span class="nx">order</span><span class="p">.</span><span class="nx">UserService</span><span class="p">),</span> <span class="nb">new</span><span class="p">(</span><span class="nx">timer</span><span class="p">.</span><span class="nx">UserService</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="nx">NewUserServiceImpl</span><span class="p">)</span>
+</span></span></code></pre></div><p>这是因为：</p>
 <ol>
-<li>在第2行代码中，我们定义了一个动态数组<code>nums</code>，其中包含了一些整数。</li>
-<li>在第3,4行代码中，我们将<code>nums</code>转换为一个迭代器. Rust中的数组本身是不支持惰性计算的，所以需要通过<code>into_iter()</code>或<code>iter()</code>转换为迭代器。</li>
-<li>在第5行代码中，我们使用<code>map</code>方法对每个元素进行平方操作。</li>
-<li>在第6行代码中，再次使用<code>map</code>方法将每个元素转换为字符串。</li>
-<li>在第7行代码中，我们使用<code>collect</code>方法将迭代器收集到一个新的数组中。</li>
+<li><code>dig.As</code>只接受接口类型的指针，而不是具体类型的指针。</li>
+<li>如果在<code>Provide</code>中指定了目的类型，即<code>dig.As</code>,那么就不会生成原始类型的对象。</li>
 </ol>
-<p>Ok, 让我们用<code>python</code>写一个“等价”的程序：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-</span></span></code></pre></div><p>思考一下，这两个程序有什么区别？🤔</p>
-<blockquote>
-<p>尽管两个程序的输出一样，但是Rust的程序更加高效。在Rust中，我们只需要遍历一次数组，而在Python中，我们需要遍历两次数组。这是因为Python中的<code>map</code>函数会创建一个新的列表，而Rust中的<code>map</code>方法只是返回一个迭代器，不会创建新的列表。</p>
-</blockquote>
-<p>看一下Rust的迭代器可能会更容易理解一些。下边这个代码使用迭代器实现了菲波那切数列，并打印了前10个菲波那切数：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Fibonacci</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">curr</span>: <span class="kt">u64</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">next</span>: <span class="kt">u64</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">impl</span><span class="w"> </span><span class="n">Fibonacci</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">new</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">Fibonacci</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Fibonacci</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">curr</span>: <span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">next</span>: <span class="mi">1</span><span class="w"> </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">impl</span><span class="w"> </span><span class="nb">Iterator</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Fibonacci</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">type</span> <span class="nc">Item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">u64</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">next</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Option</span><span class="o">&lt;</span><span class="bp">Self</span>::<span class="n">Item</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">new_next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">curr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">next</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">next</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_next</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nb">Some</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">curr</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">fib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fibonacci</span>::<span class="n">new</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Print the first 10 Fibonacci numbers
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">fib</span><span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>实现<code>Iterator</code>，只需要实现<code>next</code>方法。<code>next</code>方法也很简单，就是更新<code>self.curr</code>和<code>self.next</code>.
-在<code>main</code>代码块调用<code>take</code>方法之前,我们并没有做任何实际的计算。在调用<code>take(10)</code>之后，迭代器内部会维护一个计数器，执行10次<code>next</code>.
-在开头的代码中的<code>map</code>方法也一样，它只是创建了一个新的迭代器，只有在调用<code>collect</code>方法时才会去旧的迭代器中获取值，然后进行计算。</p>
-<h2 id="一个代码块只做一件事" class="relative group">一个代码块只做一件事 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%b8%80%e4%b8%aa%e4%bb%a3%e7%a0%81%e5%9d%97%e5%8f%aa%e5%81%9a%e4%b8%80%e4%bb%b6%e4%ba%8b" aria-label="Anchor">#</a></span></h2><p>惰性计算的意义不仅仅在于提升了性能，还能让代码更清晰，实现一个代码块只做一件事！
-例如在一个需要遍历的场景中，需要对每个元素进行做数据处理、筛选、转换。。。直接遍历的代码是这样的:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">ele</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">ele</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">ele</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ele</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">).</span><span class="n">to_string</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">target</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ele</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{:?}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>使用迭代器实现的代码是这样的：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">target</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">into_iter</span><span class="p">()</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">to_string</span><span class="p">())</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">collect</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{:?}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>可以明显看到，使用迭代器的代码更加简洁，每个代码块只做一件事，代码的逻辑更加清晰。</p>
-<h2 id="感受下haskell的魅力" class="relative group">感受下Haskell的魅力 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%84%9f%e5%8f%97%e4%b8%8bhaskell%e7%9a%84%e9%ad%85%e5%8a%9b" aria-label="Anchor">#</a></span></h2><p>Rust语言在一些设计上借鉴了Haskell的实现，比如说惰性计算。</p>
-<p>将上边的代码改为<code>Haskell</code>实现：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="kr">let</span> <span class="n">nums</span> <span class="ow">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="kr">let</span> <span class="n">target</span> <span class="ow">=</span> <span class="n">map</span> <span class="n">show</span> <span class="o">$</span> <span class="n">map</span> <span class="p">(</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="o">$</span> <span class="n">filter</span> <span class="n">odd</span> <span class="n">nums</span>
-</span></span><span class="line"><span class="cl"><span class="nf">print</span> <span class="n">target</span>
-</span></span></code></pre></div><p>代码更精炼了！</p>
+<pre tabindex="0"><code>### 2. 构造函数中含有其他类型的参数
+比如说在构造订单服务时，需要传入一个字符串表示是否当前环境，如：
+```go
+func NewOrderService(env string, repo Repo, userService UserService) *OrderService {
+	return &amp;OrderService{
+		env:         env,
+		repo:        repo,
+		userService: userService,
+	}
+}
+</code></pre><p>dig是没有办法自动解析<code>env</code>的，这时候可以通过构造一个匿名的构造函数来解决：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">config</span> <span class="o">:=</span> <span class="nf">ReadConfig</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">.</span><span class="nf">Provide</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">repo</span> <span class="nx">Repo</span><span class="p">,</span> <span class="nx">userService</span> <span class="nx">UserService</span><span class="p">)</span> <span class="o">*</span><span class="nx">OrderService</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nf">NewOrderService</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">Env</span><span class="p">,</span> <span class="nx">repo</span><span class="p">,</span> <span class="nx">userService</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">})</span>
+</span></span></code></pre></div><h2 id="其他" class="relative group">其他 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%85%b6%e4%bb%96" aria-label="Anchor">#</a></span></h2><p>在这篇博客里只记录了我自己使用上的一些经验，<code>dig</code>还支持更多的功能和用法，留给各位自己去寻找。</p>
 
       </div>
     </section>
@@ -982,7 +1039,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/internet/tool/connect_mail_server/">
+            <a class="group flex" href="/internet/rust/lay_evaluation/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -991,11 +1048,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >在终端使用命令连接邮箱服务器</span
+                  >Rust中的惰性计算</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-06-20 12:43:00 &#43;0800 CST">20 June 2024</time>
+                    <time datetime="2024-07-01 10:43:00 &#43;0800 CST">1 July 2024</time>
                   
                 </span>
               </span>
@@ -1003,25 +1060,6 @@
           
         </span>
         <span>
-          
-            <a class="group flex text-right" href="/internet/design/dig/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >go中管理服务依赖的dig工具</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2024-07-04 12:43:00 &#43;0800 CST">4 July 2024</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
-            </a>
           
         </span>
       </div>
