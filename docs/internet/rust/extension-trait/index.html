@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>应对萝卜快跑的策略们 &middot; </title>
-    <meta name="title" content="应对萝卜快跑的策略们 &middot; " />
+  <title>Rust设计模式之扩展trait &middot; </title>
+    <meta name="title" content="Rust设计模式之扩展trait &middot; " />
   
   
   
@@ -74,13 +74,13 @@
   <meta
     name="description"
     content="
-      汇总那些应对萝卜快跑导致的失业问题的策略
+      Rust设计模式之扩展trait
     "
   />
   
   
   
-  <link rel="canonical" href="/internet/ai/luobokuaipao/" />
+  <link rel="canonical" href="/internet/rust/extension-trait/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -95,22 +95,23 @@
   
   
   
-  <meta property="og:url" content="/internet/ai/luobokuaipao/">
+  <meta property="og:url" content="/internet/rust/extension-trait/">
   <meta property="og:site_name" content="主页">
-  <meta property="og:title" content="应对萝卜快跑的策略们">
-  <meta property="og:description" content="汇总那些应对萝卜快跑导致的失业问题的策略">
+  <meta property="og:title" content="Rust设计模式之扩展trait">
+  <meta property="og:description" content="Rust设计模式之扩展trait">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="internet">
-    <meta property="article:published_time" content="2024-07-15T01:43:00+08:00">
-    <meta property="article:modified_time" content="2024-07-15T01:43:00+08:00">
-    <meta property="article:tag" content="萝卜快跑">
-    <meta property="article:tag" content="AI">
+    <meta property="article:published_time" content="2024-07-18T01:43:00+08:00">
+    <meta property="article:modified_time" content="2024-07-18T01:43:00+08:00">
+    <meta property="article:tag" content="Rust">
+    <meta property="article:tag" content="Trait">
+    <meta property="article:tag" content="Extension Trait">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="应对萝卜快跑的策略们">
-  <meta name="twitter:description" content="汇总那些应对萝卜快跑导致的失业问题的策略">
+  <meta name="twitter:title" content="Rust设计模式之扩展trait">
+  <meta name="twitter:description" content="Rust设计模式之扩展trait">
 
   
   <script type="application/ld+json">
@@ -118,26 +119,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "",
-    "name": "应对萝卜快跑的策略们",
-    "headline": "应对萝卜快跑的策略们",
-    "description": "汇总那些应对萝卜快跑导致的失业问题的策略",
+    "name": "Rust设计模式之扩展trait",
+    "headline": "Rust设计模式之扩展trait",
+    "description": "Rust设计模式之扩展trait",
     
     "inLanguage": "en",
-    "url" : "\/internet\/ai\/luobokuaipao\/",
+    "url" : "\/internet\/rust\/extension-trait\/",
     "author" : {
       "@type": "Person",
       "name": "stong"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-07-15T01:43:00\u002b08:00",
-    "datePublished": "2024-07-15T01:43:00\u002b08:00",
+    "dateCreated": "2024-07-18T01:43:00\u002b08:00",
+    "datePublished": "2024-07-18T01:43:00\u002b08:00",
     
-    "dateModified": "2024-07-15T01:43:00\u002b08:00",
+    "dateModified": "2024-07-18T01:43:00\u002b08:00",
     
-    "keywords": ["萝卜快跑","AI"],
+    "keywords": ["rust","trait","extension trait"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "643"
+    "wordCount": "976"
   }
   </script>
 
@@ -618,8 +619,8 @@
   <li class="hidden inline">
     <a
       class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
-      href="/internet/ai/luobokuaipao/"
-      >应对萝卜快跑的策略们</a
+      href="/internet/rust/extension-trait/"
+      >Rust设计模式之扩展trait</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -628,7 +629,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        应对萝卜快跑的策略们
+        Rust设计模式之扩展trait
       </h1>
       
         <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
@@ -668,7 +669,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-07-15 01:43:00 &#43;0800 CST">15 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span>643 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2024-07-18 01:43:00 &#43;0800 CST">18 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span>976 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -676,7 +677,7 @@
 
 <span class="mb-[2px]">
   <a
-    href="https://github.com/stong1994/cristo/content/internet/ai/%e5%ba%94%e5%af%b9%e8%90%9d%e5%8d%9c%e5%bf%ab%e8%b7%91%e7%9a%84%e7%ad%96%e7%95%a5%e4%bb%ac.md"
+    href="https://github.com/stong1994/cristo/content/internet/rust/Rust%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f%e4%b9%8b%e6%89%a9%e5%b1%95trait.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -700,15 +701,21 @@
         
           
             <a
-              href="/tags/%E8%90%9D%E5%8D%9C%E5%BF%AB%E8%B7%91/"
+              href="/tags/rust/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >萝卜快跑</a
+              >Rust</a
             >
           
             <a
-              href="/tags/ai/"
+              href="/tags/trait/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >AI</a
+              >Trait</a
+            >
+          
+            <a
+              href="/tags/extension-trait/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Extension Trait</a
             >
           
         
@@ -736,31 +743,11 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#问题概括">问题概括</a></li>
-        <li><a href="#政府限制ai的使用">政府限制AI的使用</a>
-          <ul>
-            <li><a href="#详细描述">详细描述</a></li>
-            <li><a href="#评价">评价</a></li>
-          </ul>
-        </li>
-        <li><a href="#政府限制ai的能力">政府限制AI的能力</a>
-          <ul>
-            <li><a href="#详细描述-1">详细描述</a></li>
-            <li><a href="#评价-1">评价</a></li>
-          </ul>
-        </li>
-        <li><a href="#员工入股ai出租车">员工入股AI出租车</a>
-          <ul>
-            <li><a href="#详细描述-2">详细描述</a></li>
-            <li><a href="#评价-2">评价</a></li>
-          </ul>
-        </li>
-        <li><a href="#政府加大对ai应用公司征税的力度">政府加大对AI应用公司征税的力度</a>
-          <ul>
-            <li><a href="#详细描述-3">详细描述</a></li>
-            <li><a href="#评价-3">评价</a></li>
-          </ul>
-        </li>
+        <li><a href="#extension-trait-pattern">Extension Trait Pattern</a></li>
+        <li><a href="#为外部类型新增方法">为外部类型新增方法</a></li>
+        <li><a href="#为外部trait新增方法">为外部trait新增方法</a></li>
+        <li><a href="#孤儿限制">孤儿限制</a></li>
+        <li><a href="#推荐阅读">推荐阅读</a></li>
       </ul>
     </li>
   </ul>
@@ -772,21 +759,97 @@
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <p>武汉的萝卜快跑掀起了一场关于“应对AI导致的失业”这一社会问题的讨论。</p>
-<h2 id="问题概括" class="relative group">问题概括 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%97%ae%e9%a2%98%e6%a6%82%e6%8b%ac" aria-label="Anchor">#</a></span></h2><p>萝卜快跑无人驾驶的出现导致出租车司机大量失业，更进一步，AI的大量运用导致大量社会成员失业。如何应对这个问题？</p>
-<h2 id="政府限制ai的使用" class="relative group">政府限制AI的使用 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%94%bf%e5%ba%9c%e9%99%90%e5%88%b6ai%e7%9a%84%e4%bd%bf%e7%94%a8" aria-label="Anchor">#</a></span></h2><h3 id="详细描述" class="relative group">详细描述 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%a6%e7%bb%86%e6%8f%8f%e8%bf%b0" aria-label="Anchor">#</a></span></h3><p>普通群众A说，政府应该限制AI的使用，不然会导致大量失业。比如出台政策，每年新增的无人驾驶出租车不能超过10000辆。</p>
-<h3 id="评价" class="relative group">评价 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%84%e4%bb%b7" aria-label="Anchor">#</a></span></h3><p>如果生产力能够得到提高，那么就一定会被应用。这是社会趋势，非人力能够影响。如果花费大量力气去减缓这种趋势，必然会影响整个社会的进步。</p>
-<h2 id="政府限制ai的能力" class="relative group">政府限制AI的能力 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%94%bf%e5%ba%9c%e9%99%90%e5%88%b6ai%e7%9a%84%e8%83%bd%e5%8a%9b" aria-label="Anchor">#</a></span></h2><h3 id="详细描述-1" class="relative group">详细描述 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%a6%e7%bb%86%e6%8f%8f%e8%bf%b0-1" aria-label="Anchor">#</a></span></h3><p>政府要求每3台无人驾驶就必须配备一个安全员。</p>
-<h3 id="评价-1" class="relative group">评价 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%84%e4%bb%b7-1" aria-label="Anchor">#</a></span></h3><p>同上一个问题一样，政府不应该约束生产力的提高。</p>
-<h2 id="员工入股ai出租车" class="relative group">员工入股AI出租车 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%91%98%e5%b7%a5%e5%85%a5%e8%82%a1ai%e5%87%ba%e7%a7%9f%e8%bd%a6" aria-label="Anchor">#</a></span></h2><h3 id="详细描述-2" class="relative group">详细描述 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%a6%e7%bb%86%e6%8f%8f%e8%bf%b0-2" aria-label="Anchor">#</a></span></h3><p>周鸿祎说自己想出了一个“馊主意”：让出租车司机出钱购买AI出租车，和“萝卜快跑”所属公司共享AI出租车带来的收益。</p>
-<h3 id="评价-2" class="relative group">评价 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%84%e4%bb%b7-2" aria-label="Anchor">#</a></span></h3><p>AI出租车带来的收益是一种被动收益，如果不限购，那么在市场经济的推动下，必然会导致实际的入股带来很低的收益（供需关系决定收益）。</p>
-<p>而如果限制入股条件之一是必须是出租车司机：</p>
+        <h2 id="extension-trait-pattern" class="relative group">Extension Trait Pattern <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#extension-trait-pattern" aria-label="Anchor">#</a></span></h2><p>扩展trait是一种设计模式，常用于扩展所依赖的外部类型的能力。</p>
+<p>比如说在<code>rust</code>中常用<code>println</code>来打印内容：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello, world!&#34;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p><code>hello</code>的类型是<code>String</code>，没有实现<code>Display trait</code>, 因此无法直接<code>println(helo)</code>，而是通过占位符的方式进行打印。</p>
+<p>如果代码里有非常多的地方需要打印，那么会非常麻烦。要是可以直接使用<code>print</code>方法就好了。</p>
+<p>这时就可以使用<code>扩展trait</code>来实现这个功能。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">trait</span><span class="w"> </span><span class="n">StringExt</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">print</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">impl</span><span class="w"> </span><span class="n">StringExt</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">print</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello, world!&#34;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">hello</span><span class="p">.</span><span class="n">print</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="为外部类型新增方法" class="relative group">为外部类型新增方法 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%b8%ba%e5%a4%96%e9%83%a8%e7%b1%bb%e5%9e%8b%e6%96%b0%e5%a2%9e%e6%96%b9%e6%b3%95" aria-label="Anchor">#</a></span></h2><p>上面的例子中，我们为<code>String</code>类型新增了一个<code>print</code>方法, 只需要以下几个步骤：</p>
 <ol>
-<li>首先，车租车司机并不是收入高的群体，他们能够拿出多少钱来入股？</li>
-<li>由1会导致入股资质转卖，形成少数人拥有大量的股份，贫富差距反而变大。</li>
+<li>定义一个<code>trait</code>, 通常以类型名称开头，以<code>Ext</code>结尾。</li>
+<li>为<code>String</code>类型实现这个<code>trait</code>。</li>
+<li>在实现中增加方法<code>print</code>。</li>
+<li>在需要的地方使用这个方法。</li>
 </ol>
-<h2 id="政府加大对ai应用公司征税的力度" class="relative group">政府加大对AI应用公司征税的力度 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%94%bf%e5%ba%9c%e5%8a%a0%e5%a4%a7%e5%af%b9ai%e5%ba%94%e7%94%a8%e5%85%ac%e5%8f%b8%e5%be%81%e7%a8%8e%e7%9a%84%e5%8a%9b%e5%ba%a6" aria-label="Anchor">#</a></span></h2><h3 id="详细描述-3" class="relative group">详细描述 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%a6%e7%bb%86%e6%8f%8f%e8%bf%b0-3" aria-label="Anchor">#</a></span></h3><p>播客《后互联网时代的乱弹》第121期提出，对应用AI而产生大的巨额收益或造成社会人员失业的企业应增大征税力度，由政府负责二次分配来保证社会的稳定。</p>
-<h3 id="评价-3" class="relative group">评价 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%af%84%e4%bb%b7-3" aria-label="Anchor">#</a></span></h3><p>这应该是我看到的最靠谱的一个解决办法。</p>
+<p>让我们再实现一个练练手: 为动态数组添加一个<code>sum</code>方法:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">trait</span><span class="w"> </span><span class="n">VecExt</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">sum</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">T</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">impl</span><span class="w"> </span><span class="n">VecExt</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">sum</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">i32</span> <span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">sum</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">sum</span><span class="p">());</span><span class="w"> </span><span class="c1">// Outputs: 15
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="为外部trait新增方法" class="relative group">为外部trait新增方法 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%b8%ba%e5%a4%96%e9%83%a8trait%e6%96%b0%e5%a2%9e%e6%96%b9%e6%b3%95" aria-label="Anchor">#</a></span></h2><p>很多依赖库的方法返回值是<code>trait</code>，为外部<code>trait</code>新增方法能够减少很多重复的代码。</p>
+<p>让我们为<code>std::error::Error</code>实现<code>StringExt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">impl</span><span class="w"> </span><span class="n">StringExt</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">std</span>::<span class="n">error</span>::<span class="n">Error</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">print</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>上边的代码会编译失败，因为<code>Rust</code>不允许为外部<code>trait</code>实现本地<code>trait</code>。但是我们可以&quot;曲线救国&quot;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">impl</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nc">std</span>::<span class="n">error</span>::<span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="n">StringExt</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">print</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>这个代码是可以编译通过的，因为我们不是在为<code>std::error::Error</code>实现本地<code>trait</code>, 而是为所有实现了<code>std::error::Error</code>的具体类型实现本地<code>trait</code>!!</p>
+<p>测试一下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">fs</span>::<span class="n">File</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">trait</span><span class="w"> </span><span class="n">StringExt</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">print</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">impl</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nc">std</span>::<span class="n">error</span>::<span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="n">StringExt</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">fn</span> <span class="nf">print</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span>::<span class="n">open</span><span class="p">(</span><span class="s">&#34;non_existent_file.txt&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nb">Ok</span><span class="p">(</span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;File opened successfully.&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nb">Err</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">print</span><span class="p">(),</span><span class="w"> </span><span class="c1">// Outputs: No such file or directory (os error 2)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="孤儿限制" class="relative group">孤儿限制 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%ad%a4%e5%84%bf%e9%99%90%e5%88%b6" aria-label="Anchor">#</a></span></h2><p><code>Rust</code>通过<code>孤儿规则</code>来保证类型安全，其具体内容如下:</p>
+<ol>
+<li>可以为任意类型实现本地<code>trait</code></li>
+<li>可以为本地类型实现外部<code>trait</code></li>
+<li>不能为外部类型实现外部<code>trait</code></li>
+</ol>
+<p>第一条我们在上述内容中已经看到了，第二条是<code>trait</code>的基本使用，第三条需要注意下: 如果我们为外部类型<code>String</code>实现外部<code>trait</code> <code>std::error::Error</code>会发生什么?</p>
+<p>如果我们可以这么做的话，别人也可以这么做。这意味程序中可能会有多个实现，而编译器无法判断应该使用哪一个。这就是孤儿限制的缘由。</p>
+<h2 id="推荐阅读" class="relative group">推荐阅读 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8e%a8%e8%8d%90%e9%98%85%e8%af%bb" aria-label="Anchor">#</a></span></h2><ul>
+<li><a href="https://www.youtube.com/watch?v=bnnacleqg6k" target="_blank" rel="noreferrer">Type-Driven API Design in Rust</a></li>
+</ul>
 
       </div>
     </section>
@@ -914,29 +977,12 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/internet/rust/error-base/">
+            <a class="group flex" href="/internet/rust/error-libs/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
                 ><span class="ltr:hidden rtl:inline">&rarr;</span></span
               >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Rust中的错误处理——基础</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2024-07-14 01:43:00 &#43;0800 CST">14 July 2024</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-            <a class="group flex text-right" href="/internet/rust/error-libs/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -948,12 +994,10 @@
                   
                 </span>
               </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
